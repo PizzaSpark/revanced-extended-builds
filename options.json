@@ -1,1 +1,57 @@
-[]
+        
+[
+    {
+      "patchName": "Custom branding name YouTube",
+      "options": [
+        {
+          "key": "AppName",
+          "value": "YouTube ReX"
+        }
+      ]
+    },
+    {
+      "patchName": "Custom branding name YouTube Music",
+      "options": [
+        {
+          "key": "AppNameLauncher",
+          "value": "YT Music ReX"
+        },
+        {
+          "key": "AppNameNotification",
+          "value": "YT Music ReX"
+        }
+      ]
+    },
+    {
+      "patchName": "Custom package name",
+      "options": [
+        {
+          "key": "PackageNameYouTube",
+          "value": "yt.rvx.seanti.exe"
+        },
+        {
+          "key": "PackageNameYouTubeMusic",
+          "value": "ytm.rvx.seanti.exe"
+        }
+      ]
+    },
+    {
+      "patchName": "Custom branding name Reddit",
+      "options": [
+        {
+          "key": "AppName",
+          "value": "Reddit ReX"
+        }
+      ]
+    },
+    {
+      "patchName": "Change package name",
+      "options": [
+        {
+          "key": "PackageNameReddit",
+          "value": "reddit.rvx.seanti.exe"
+        }
+      ]
+    }
+  ]
+          
