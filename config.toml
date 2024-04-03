@@ -4,6 +4,9 @@ included-patches = "'SIM spoof'"
 
 [Youtube ReX ]
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
+patches-source = "anddea/revanced-patches"
+integrations-source = "anddea/revanced-integrations"
+rv-brand = "anddea ReVanced"
 arch = "both"
 
 [Reddit ReX]
