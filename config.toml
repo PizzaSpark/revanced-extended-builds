@@ -1,21 +1,20 @@
-[Tiktok ReX]
-apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
-included-patches = "'SIM spoof'"
+patches-source = "anddea/revanced-patches"
+integrations-source = "anddea/revanced-integrations"
+cli-source = "anddea/revanced-cli"
+rv-brand = "ReX"
 
-[Youtube ReX ]
+[YouTube]
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
-patches-source = "anddea/revanced-patches"
-integrations-source = "anddea/revanced-integrations"
-rv-brand = "anddea ReVanced"
-arch = "both"
+included-patches = "'Custom branding name YouTube'"
 
-[Reddit ReX]
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
-
-[Youtube Music ReX]
+[Music]
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
-patches-source = "anddea/revanced-patches"
-integrations-source = "anddea/revanced-integrations"
-rv-brand = "anddea ReVanced"
-arch = "both"
+included-patches = "'Custom branding name YouTube Music'"
+
+[Reddit]
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
+included-patches = "'Change package name' 'Custom branding name Reddit'"
+
+
+
 
