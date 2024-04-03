@@ -20,3 +20,9 @@ integrations-source = "anddea/revanced-integrations"
 rv-brand = "anddea ReVanced"
 included-patches = "'Change package name' 'Custom branding name Reddit'"
 
+[Tiktok]
+apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
+patches-source = "revanced/revanced-patches"
+integrations-source = "revanced/revanced-integrations"
+included-patches = "'SIM spoof'"
+
