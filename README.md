@@ -3,7 +3,7 @@
 
 Extensive ReVanced builder  
 
-Get the [latest CI release]([https://github.com/j-hc/revanced-magisk-module](https://github.com/PizzaSpark/revanced-extended-builds/releases).
+Get the [latest CI release](https://github.com/PizzaSpark/revanced-extended-builds).
 
 <details><summary><big>Features</big></summary>
 <ul>
