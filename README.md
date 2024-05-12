@@ -1,7 +1,7 @@
 #### ⚠️ Do not download modules from 3rd party sources like random websites you found on Google. There are many that uses my modules and impersonates ReVanced.
 
 # ReVanced Magisk Module
-[![CI](https://github.com/PizzaSpark/revanced-extended-builds/actions/workflows/ci.yml/badge.svg?event=schedule)]([https://github.com/j-hc/revanced-magisk-module](https://github.com/PizzaSpark/revanced-extended-builds/actions/workflows/ci.yml)
+[![CI](https://github.com/PizzaSpark/revanced-extended-builds/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/PizzaSpark/revanced-extended-builds/actions/workflows/ci.yml)
 
 Extensive ReVanced builder  
 
