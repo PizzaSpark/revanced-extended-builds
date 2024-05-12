@@ -1,7 +1,7 @@
-# ReVanced Magisk Module
+# ReVanced Module
 [![CI](https://github.com/PizzaSpark/revanced-extended-builds/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/PizzaSpark/revanced-extended-builds/actions/workflows/ci.yml)
 
-Extensive ReVanced builder  
+Extensive ReVanced builder for inotia00 and anddea patches
 
 Get the [latest CI release](https://github.com/PizzaSpark/revanced-extended-builds/releases).
 
