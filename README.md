@@ -3,11 +3,10 @@
 
 Extensive ReVanced builder  
 
-Get the [latest CI release](https://github.com/PizzaSpark/revanced-extended-builds).
+Get the [latest CI release](https://github.com/PizzaSpark/revanced-extended-builds/releases).
 
 <details><summary><big>Features</big></summary>
 <ul>
- <li>Support all present and future ReVanced and <a href="https://github.com/inotia00/revanced-patches">ReVanced Extended</a> apps</li>
  <li> Updated daily with the latest versions of apps and patches</li>
  <li> Optimize APKs and modules for size</li>
  <li> Modules</li>
