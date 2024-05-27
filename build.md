@@ -9,9 +9,9 @@ Use [zygisk-detach](https://github.com/j-hc/zygisk-detach) to detach root ReVanc
 
 Changelog:  
 CLI: j-hc/revanced-cli-4.6.0-all.jar  
-Integrations: inotia00/revanced-integrations-1.9.2.apk  
-Patches: inotia00/revanced-patches-4.8.3.jar  
-[Changelog](https://github.com/inotia00/revanced-patches/releases/tag/v4.8.3)  
+Integrations: inotia00/revanced-integrations-1.9.3.apk  
+Patches: inotia00/revanced-patches-4.8.5.jar  
+[Changelog](https://github.com/inotia00/revanced-patches/releases/tag/v4.8.5)  
 
 Skipped:  
 Patches: anddea/revanced-patches-2.224.0.jar    
