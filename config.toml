@@ -1,11 +1,11 @@
-[YouTube Anddea]
+[YouTube]
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 patches-source = "anddea/revanced-patches"
 integrations-source = "anddea/revanced-integrations"
 rv-brand = "anddea ReVanced"
 included-patches = "'Custom branding name YouTube'"
 
-[YT Music Anddea]
+[YT Music]
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 patches-source = "anddea/revanced-patches"
 integrations-source = "anddea/revanced-integrations"
@@ -13,41 +13,44 @@ rv-brand = "anddea ReVanced"
 arch = "arm64-v8a"
 included-patches = "'Custom branding name YouTube Music'"
 
-[Reddit Anddea]
+[Reddit]
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
 patches-source = "anddea/revanced-patches"
 integrations-source = "anddea/revanced-integrations"
 rv-brand = "anddea ReVanced"
 included-patches = "'Change package name' 'Custom branding name Reddit'"
 
-[Tiktok Revanced]
-apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
-patches-source = "revanced/revanced-patches"
-integrations-source = "revanced/revanced-integrations"
-included-patches = "'SIM spoof'"
-
 
 # F r o m    t h e    O G    i n o t i a    f o r    m o r e    s t a b l e
 
 
-[YouTube inotia00]
+[YouTube]
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "inotia00 ReVanced"
 
-[YT Music inotia00]
+[YT Music]
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "inotia00 ReVanced"
 arch = "arm64-v8a"
 
-[Reddit inotia00]
+[Reddit]
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "inotia00 ReVanced"
 included-patches = "'Change package name' 'Custom branding name Reddit'"
+
+
+# F R O M    O F F I C I A L    R E V A N C E D
+
+[Tiktok Revanced]
+apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
+patches-source = "revanced/revanced-patches"
+integrations-source = "revanced/revanced-integrations"
+included-patches = "'SIM spoof'"
 
 
