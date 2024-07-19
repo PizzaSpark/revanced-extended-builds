@@ -1,6 +1,6 @@
 [
     {
-        "patchName": "Custom branding name YouTube",
+        "patchName": "Custom branding name for YouTube",
         "options": [
             {
                 "key": "AppName",
@@ -9,15 +9,24 @@
         ]
     },
     {
-        "patchName": "Custom branding name YouTube Music",
+        "patchName": "Custom branding name for YouTube Music",
         "options": [
             {
-                "key": "AppNameLauncher",
-                "value": "YT Music ReX"
+                "key": "AppNameNotification",
+                "value": "YouTube Music ReX"
             },
             {
-                "key": "AppNameNotification",
-                "value": "YT Music ReX"
+                "key": "AppNameLauncher",
+                "value": "YouTube Music ReX"
+            }
+        ]
+    },
+    {
+        "patchName": "Custom branding name for Reddit",
+        "options": [
+            {
+                "key": "AppName",
+                "value": "Reddit ReX"
             }
         ]
     },
@@ -35,130 +44,11 @@
         ]
     },
     {
-        "patchName": "Custom branding name Reddit",
-        "options": [
-            {
-                "key": "AppName",
-                "value": "Reddit ReX"
-            }
-        ]
-    },
-    {
         "patchName": "Change package name",
         "options": [
             {
                 "key": "PackageNameReddit",
                 "value": "reddit.rvx.seanti.exe"
-            }
-        ]
-    },
-    {
-        "patchName": "Custom package name",
-        "options": [
-            {
-                "key": "PackageNameYouTube",
-                "value": "yt.rvx.seanti.exe"
-            },
-            {
-                "key": "PackageNameYouTubeMusic",
-                "value": "ytm.rvx.seanti.exe"
-            }
-        ]
-    },
-    {
-        "patchName": "Custom branding name YouTube",
-        "options": [
-            {
-                "key": "AppName",
-                "value": "YouTube ReX"
-            }
-        ]
-    },
-    {
-        "patchName": "Custom branding name YouTube Music",
-        "options": [
-            {
-                "key": "AppNameNotification",
-                "value": "YT Music ReX"
-            },
-            {
-                "key": "AppNameLauncher",
-                "value": "YT Music ReX"
-            }
-        ]
-    },
-    {
-        "patchName": "Change package name",
-        "options": [
-            {
-                "key": "PackageNameReddit",
-                "value": "reddit.rvx.seanti.exe"
-            }
-        ]
-    },
-    {
-        "patchName": "Custom branding name Reddit",
-        "options": [
-            {
-                "key": "AppName",
-                "value": "Reddit ReX"
-            }
-        ]
-    },
-
-
-
-    
-    {
-        "patchName": "Custom package name",
-        "options": [
-            {
-                "key": "PackageNameYouTube",
-                "value": "yt.rvx.seanti.exe"
-            },
-            {
-                "key": "PackageNameYouTubeMusic",
-                "value": "ytm.rvx.seanti.exe"
-            }
-        ]
-    },
-    {
-        "patchName": "Custom branding name YouTube",
-        "options": [
-            {
-                "key": "AppName",
-                "value": "YouTube ReX"
-            }
-        ]
-    },
-    {
-        "patchName": "Custom branding name YouTube Music",
-        "options": [
-            {
-                "key": "AppNameNotification",
-                "value": "YT Music ReX"
-            },
-            {
-                "key": "AppNameLauncher",
-                "value": "YT Music ReX"
-            }
-        ]
-    },
-    {
-        "patchName": "Change package name",
-        "options": [
-            {
-                "key": "PackageNameReddit",
-                "value": "reddit.rvx.seanti.exe"
-            }
-        ]
-    },
-    {
-        "patchName": "Custom branding name Reddit",
-        "options": [
-            {
-                "key": "AppName",
-                "value": "Reddit ReX"
             }
         ]
     }

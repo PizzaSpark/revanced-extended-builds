@@ -1,3 +1,5 @@
+# a n d d e a
+
 [YouTube a]
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 patches-source = "anddea/revanced-patches"
@@ -21,7 +23,7 @@ rv-brand = "anddea ReVanced"
 included-patches = "'Change package name' 'Custom branding name Reddit'"
 
 
-# F r o m    t h e    O G    i n o t i a    f o r    m o r e    s t a b l e
+# i n o t i a 0 0
 
 
 [YouTube i]
@@ -45,7 +47,7 @@ rv-brand = "inotia00 ReVanced"
 included-patches = "'Change package name' 'Custom branding name Reddit'"
 
 
-# F R O M    O F F I C I A L    R E V A N C E D
+# O f f i c i a l    R e v a n c e d 
 
 [Tiktok Revanced]
 apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
