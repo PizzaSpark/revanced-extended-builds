@@ -4,7 +4,7 @@
         "options": [
             {
                 "key": "AppName",
-                "value": "YouTube ReX"
+                "value": "YouTube RVX"
             }
         ]
     },
@@ -13,11 +13,11 @@
         "options": [
             {
                 "key": "AppNameNotification",
-                "value": "YouTube Music ReX"
+                "value": "YouTube Music RVX"
             },
             {
                 "key": "AppNameLauncher",
-                "value": "YouTube Music ReX"
+                "value": "YouTube Music RVX"
             }
         ]
     },
