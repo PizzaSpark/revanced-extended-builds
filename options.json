@@ -22,6 +22,19 @@
         ]
     },
     {
+        "patchName": "GmsCore support",
+        "options": [
+            {
+                "key": "PackageNameYouTube",
+                "value": "yt.rvx.seanti.exe"
+            },
+            {
+                "key": "PackageNameYouTubeMusic",
+                "value": "ytm.rvx.seanti.exe"
+            }
+        ]
+    },
+    {
         "patchName": "Custom branding name for Reddit",
         "options": [
             {
