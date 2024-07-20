@@ -1,7 +1,7 @@
 YTMusica: 7.06.53  
 Reddita: 2024.17.0  
-YouTubea: 19.23.40  
 YouTubei: 19.16.39  
+YouTubea: 19.23.40  
 YTMusici: 7.10.51  
 Redditi: 2024.17.0  
 
