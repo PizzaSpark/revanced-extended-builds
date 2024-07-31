@@ -1,3 +1,27 @@
+# i n o t i a 0 0
+
+[YouTube i]
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
+patches-source = "inotia00/revanced-patches"
+integrations-source = "inotia00/revanced-integrations"
+rv-brand = "inotia00 ReVanced"
+included-patches = "'Visual preferences icons'"
+
+[YT Music i]
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
+patches-source = "inotia00/revanced-patches"
+integrations-source = "inotia00/revanced-integrations"
+rv-brand = "inotia00 ReVanced"
+arch = "arm64-v8a"
+
+[Reddit i]
+apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
+patches-source = "inotia00/revanced-patches"
+integrations-source = "inotia00/revanced-integrations"
+rv-brand = "inotia00 ReVanced"
+included-patches = "'Change package name' 'Custom branding name Reddit'"
+
+
 # a n d d e a
 
 [YouTube a]
@@ -20,30 +44,6 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
 patches-source = "anddea/revanced-patches"
 integrations-source = "anddea/revanced-integrations"
 rv-brand = "anddea ReVanced"
-included-patches = "'Change package name' 'Custom branding name Reddit'"
-
-
-# i n o t i a 0 0
-
-
-[YouTube i]
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
-patches-source = "inotia00/revanced-patches"
-integrations-source = "inotia00/revanced-integrations"
-rv-brand = "inotia00 ReVanced"
-
-[YT Music i]
-apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
-patches-source = "inotia00/revanced-patches"
-integrations-source = "inotia00/revanced-integrations"
-rv-brand = "inotia00 ReVanced"
-arch = "arm64-v8a"
-
-[Reddit i]
-apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
-patches-source = "inotia00/revanced-patches"
-integrations-source = "inotia00/revanced-integrations"
-rv-brand = "inotia00 ReVanced"
 included-patches = "'Change package name' 'Custom branding name Reddit'"
 
 
