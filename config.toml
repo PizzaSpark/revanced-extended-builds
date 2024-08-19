@@ -29,4 +29,7 @@ patches-source = "revanced/revanced-patches"
 integrations-source = "revanced/revanced-integrations"
 included-patches = "'SIM spoof'"
 
-
+[Photos]
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos/"
+patches-source = "revanced/revanced-patches"
+integrations-source = "revanced/revanced-integrations"
