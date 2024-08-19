@@ -23,7 +23,7 @@ included-patches = "'Change package name' 'Custom branding name for Reddit'"
 
 # O f f i c i a l    R e v a n c e d 
 
-[Tiktok Revanced]
+[Tiktok]
 apkmirror-dlurl = "https://apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
 patches-source = "revanced/revanced-patches"
 integrations-source = "revanced/revanced-integrations"
