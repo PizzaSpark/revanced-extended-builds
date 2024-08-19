@@ -1,7 +1,8 @@
 YTMusici: 7.13.52  
-Redditi: 2024.17.0  
 YouTubei: 19.16.39  
+Redditi: 2024.17.0  
 Tiktok: 32.5.3  
+GooglePhotos: 6.95.0.663027175  
 
 Install [Microg](https://github.com/ReVanced/GmsCore/releases) for non-root YouTube and YT Music APKs  
 Use [zygisk-detach](https://github.com/j-hc/zygisk-detach) to detach root ReVanced YouTube and YT Music from Play Store  
