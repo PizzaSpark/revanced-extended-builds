@@ -7,7 +7,6 @@ assignees: ''
 
 ---
 
-**DO NOT REPORT REVANCED STUFF IN THIS REPO**  
-if you delete these lines and proceed to report revanced stuff like **patch bugs** or **patch requests**, you will be **blocked** from this repo
+**DO NOT REPORT REVANCED STUFF IN THIS REPO**
 
-Use issues only to report bugs of the rvmm builder or the modules
+**Describe the bug of the rvmm builder or the modules**
