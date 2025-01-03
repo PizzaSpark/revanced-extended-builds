@@ -8,7 +8,9 @@ parallel-jobs = 1
 [YoutubeRVXinotia00]
 enabled = true
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
-arch = "arm64-v8a"
+version = "19.44.39"
+arch = "universal"
+dpi = "nodpi"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "inotia00ReVanced"
@@ -17,6 +19,7 @@ patcher-args = "-OpackageNameYouTube=yt.rvx.seanti.exe -OpackageNameYouTubeMusic
 [YTMusicRVXinotia00]
 enabled = true
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
+version = "7.25.53"
 arch = "arm64-v8a"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
@@ -26,7 +29,8 @@ patcher-args = "-OappNameNotification=YT Music RVX -OappNameLauncher=YT Music RV
 [RedditRVXinotia00]
 enabled = true
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
-arch = "arm64-v8a"
+arch = "universal"
+dpi = "120-640dpi"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "inotia00ReVanced"
