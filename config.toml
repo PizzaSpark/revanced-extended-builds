@@ -9,7 +9,7 @@ parallel-jobs = 1
 enabled = true
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 version = "19.44.39"
-arch = "universal"
+arch = "all"
 build-mode = "apk"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
@@ -30,6 +30,8 @@ patcher-args = "-OappNameNotification=YT Music RVX -OappNameLauncher=YT Music RV
 [RedditRVXinotia00]
 enabled = true
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
+arch = "all"
+build-mode = "apk"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "inotia00ReVanced"
