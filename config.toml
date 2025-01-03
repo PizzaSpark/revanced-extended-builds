@@ -33,7 +33,7 @@ patcher-args = "-OpackageNameReddit=reddit.rvx.seanti.exe -OappName=Reddit RVX "
 # C r i m e r a    P a t c h e s
 
 [Twittercrimera]
-enabled = true
+enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
 build-mode = "apk"
 dpi = "120-640dpi"
