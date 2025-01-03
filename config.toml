@@ -6,21 +6,21 @@ parallel-jobs = 1
 
 # RVX
 
-[Youtube RVX inotia00]
+[YoutubeRVXinotia00]
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "inotia00 ReVanced"
 patcher-args = "-OpackageNameYouTube=yt.rvx.seanti.exe -OpackageNameYouTubeMusic=ytm.rvx.seanti.exe -OappName=YouTube RVX "
 
-[YT Music RVX inotia00]
+[YTMusicRVXinotia00]
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "inotia00 ReVanced"
 patcher-args = "-OappNameNotification=YT Music RVX -OappNameLauncher=YT Music RVX -OpackageNameYouTube=yt.rvx.seanti.exe -OpackageNameYouTubeMusic=ytm.rvx.seanti.exe "
 
-[Reddit RVX inotia00]
+[RedditRVXinotia00]
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
@@ -30,7 +30,7 @@ patcher-args = "-OpackageNameReddit=reddit.rvx.seanti.exe -OappName=Reddit RVX "
 
 # C r i m e r a    P a t c h e s
 
-[Twitter crimera]
+[Twittercrimera]
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
 build-mode = "apk"
 dpi = "120-640dpi"
