@@ -6,7 +6,7 @@ parallel-jobs = 1
 # RVX
 
 [YoutubeRVXinotia00]
-enabled = true
+enabled = false
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
@@ -14,7 +14,7 @@ rv-brand = "inotia00 ReVanced"
 patcher-args = "-OpackageNameYouTube=yt.rvx.seanti.exe -OpackageNameYouTubeMusic=ytm.rvx.seanti.exe -OappName=YouTube RVX "
 
 [YTMusicRVXinotia00]
-enabled = true
+enabled = false
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
@@ -22,7 +22,7 @@ rv-brand = "inotia00 ReVanced"
 patcher-args = "-OappNameNotification=YT Music RVX -OappNameLauncher=YT Music RVX -OpackageNameYouTube=yt.rvx.seanti.exe -OpackageNameYouTubeMusic=ytm.rvx.seanti.exe "
 
 [RedditRVXinotia00]
-enabled = true
+enabled = false
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
