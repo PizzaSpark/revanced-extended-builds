@@ -27,7 +27,7 @@ patcher-args = "-OappNameNotification=YT Music RVX -OappNameLauncher=YT Music RV
 enabled = true
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
 patches-source = "inotia00/revanced-patches"
-integrations-source = "inotia00/revanced-integrations"
+cli-source = "inotia00/revanced-cli"
 rv-brand = "inotia00ReVanced"
 included-patches = "'Change package name' 'Custom branding name for Reddit' 'Hide navigation buttons'"
 patcher-args = "-OpackageNameReddit=reddit.rvx.seanti.exe -OappName=Reddit RVX "
