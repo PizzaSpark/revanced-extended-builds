@@ -187,7 +187,10 @@ _req() {
 	local ip="$1" op="$2"
 	shift 2
 	if [ "$op" = - ]; then
-		curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip"
+		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip"; then
+			epr "Request failed: $ip"
+			return 1
+		fi
 	else
 		if [ -f "$op" ]; then return; fi
 		local dlp
@@ -196,7 +199,10 @@ _req() {
 			while [ -f "$dlp" ]; do sleep 1; done
 			return
 		fi
-		curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip" -o "$dlp" || return 1
+		if ! curl -L -c "$TEMP_DIR/cookie.txt" -b "$TEMP_DIR/cookie.txt" --connect-timeout 5 --retry 0 --fail -s -S "$@" "$ip" -o "$dlp"; then
+			epr "Request failed: $ip"
+			return 1
+		fi
 		mv -f "$dlp" "$op"
 	fi
 }
@@ -261,17 +267,18 @@ isoneof() {
 merge_splits() {
 	local bundle=$1 output=$2
 	pr "Merging splits"
-	gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.3.9/APKEditor-1.3.9.jar" >/dev/null || return 1
+	gh_dl "$TEMP_DIR/apkeditor.jar" "https://github.com/REAndroid/APKEditor/releases/download/V1.4.2/APKEditor-1.4.2.jar" >/dev/null || return 1
 	if ! OP=$(java -jar "$TEMP_DIR/apkeditor.jar" merge -i "${bundle}" -o "${bundle}.mzip" -clean-meta -f 2>&1); then
-		epr "$OP"
+		epr "Apkeditor ERROR: $OP"
 		return 1
 	fi
 	# this is required because of apksig
 	mkdir "${bundle}-zip"
 	unzip -qo "${bundle}.mzip" -d "${bundle}-zip"
-	pushd "${bundle}-zip" || abort
-	zip -0rq "${CWD}/${bundle}.zip" .
-	popd || abort
+	(
+		cd "${bundle}-zip" || abort
+		zip -0rq "${CWD}/${bundle}.zip" .
+	)
 	# if building module, sign the merged apk properly
 	if isoneof "module" "${build_mode_arr[@]}"; then
 		patch_apk "${bundle}.zip" "${output}" "--exclusive" "${args[cli]}" "${args[ptjar]}"
@@ -284,6 +291,7 @@ merge_splits() {
 	return $ret
 }
 
+dl_url="https://www.apkmirror.com/"
 # -------------------- apkmirror --------------------
 apk_mirror_search() {
 	local resp="$1" dpi="$2" arch="$3" apk_bundle="$4"
@@ -310,8 +318,10 @@ dl_apkmirror() {
 		is_bundle=true
 	else
 		if [ "$arch" = "arm-v7a" ]; then arch="armeabi-v7a"; fi
-		local resp node app_table dlurl=""
-		url="${url}/${url##*/}-${version//./-}-release/"
+		local resp node app_table uurl dlurl=""
+		uurl=$(grep -F "downloadLink" <<<"$__APKMIRROR_RESP__" | grep -F "${version//./-}-release/" |
+			sed -n 's;.*href="\(.*-release\).*;\1;p')
+		if [ -z "$uurl" ]; then url="${url}/${url##*/}-${version//./-}-release/"; else url=https://www.apkmirror.com$uurl; fi
 		resp=$(req "$url" -) || return 1
 		node=$($HTMLQ "div.table-row.headerFont:nth-last-child(1)" -r "span:nth-child(n+3)" <<<"$resp")
 		if [ "$node" ]; then
@@ -323,15 +333,16 @@ dl_apkmirror() {
 			[ -z "$dlurl" ] && return 1
 			resp=$(req "$dlurl" -)
 		fi
+		dl_url=$dlurl
 		url=$(echo "$resp" | $HTMLQ --base https://www.apkmirror.com --attribute href "a.btn") || return 1
 		url=$(req "$url" - | $HTMLQ --base https://www.apkmirror.com --attribute href "span > a[rel = nofollow]") || return 1
 	fi
 
 	if [ "$is_bundle" = true ]; then
-		req "$url" "${output}.apkm"
+		req "$url" "${output}.apkm" || return 1
 		merge_splits "${output}.apkm" "${output}"
 	else
-		req "$url" "${output}"
+		req "$url" "${output}" || return 1
 	fi
 }
 get_apkmirror_vers() {
@@ -390,6 +401,7 @@ dl_uptodown() {
 			break
 		done
 	fi
+	dl_url=$versionURL
 	local data_url
 	data_url=$($HTMLQ "#detail-download-button" --attribute data-url <<<"$resp") || return 1
 	req "https://dw.uptodown.com/dwn/${data_url}" "$output"
@@ -401,6 +413,7 @@ dl_archive() {
 	local url=$1 version=$2 output=$3 arch=$4
 	local path version=${version// /}
 	path=$(grep "${version_f#v}-${arch// /}" <<<"$__ARCHIVE_RESP__") || return 1
+	dl_url=$url
 	req "${url}/${path}" "$output"
 }
 get_archive_resp() {
@@ -416,7 +429,7 @@ get_archive_pkg_name() { echo "$__ARCHIVE_PKG_NAME__"; }
 patch_apk() {
 	local stock_input=$1 patched_apk=$2 patcher_args=$3 rv_cli_jar=$4 rv_patches_jar=$5
 	local cmd="env -u GITHUB_REPOSITORY java -jar $rv_cli_jar patch $stock_input --purge -o $patched_apk -p $rv_patches_jar --keystore=ks.keystore \
---keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc $patcher_args"
+--keystore-entry-password=123456789 --keystore-password=123456789 --signer=E85 --keystore-entry-alias=E85 $patcher_args"
 	if [ "$OS" = Android ]; then cmd+=" --custom-aapt2-binary=${AAPT2}"; fi
 	pr "$cmd"
 	if eval "$cmd"; then [ -f "$patched_apk" ]; else
@@ -518,22 +531,25 @@ build_rv() {
 		done
 		if [ ! -f "$stock_apk" ]; then return 0; fi
 	fi
-	if ! check_sig "$stock_apk" "$pkg_name"; then
-		abort "apk signature mismatch '$stock_apk'"
+	if ! OP=$(check_sig "$stock_apk" "$pkg_name" 2>&1) && ! grep -qFx "ERROR: Missing META-INF/MANIFEST.MF" <<<"$OP"; then
+		abort "apk signature mismatch '$stock_apk': $OP"
 	fi
-	log "${table}: ${version}"
+
+    if [ "$dl_from" = apkmirror ]; then
+        dl_from="APKMirror"
+    elif [ "$dl_from" = uptodown ]; then
+        dl_from="Uptodown"
+	elif [ "$dl_from" = archive ]; then
+		dl_from="Archive"
+    fi
+
+	log "${table}: ${version}\ndownloaded from: [$dl_from - ${table}]($dl_url)"
 
 	local microg_patch
 	microg_patch=$(grep "^Name: " <<<"$list_patches" | grep -i "gmscore\|microg" || :) microg_patch=${microg_patch#*: }
 	if [ -n "$microg_patch" ] && [[ ${p_patcher_args[*]} =~ $microg_patch ]]; then
 		epr "You cant include/exclude microg patch as that's done by rvmm builder automatically."
 		p_patcher_args=("${p_patcher_args[@]//-[ei] ${microg_patch}/}")
-	fi
-	local spoof_streams_patch
-	spoof_streams_patch=$(grep "^Name: " <<<"$list_patches" | grep -i "spoof" | grep -i "streams" || :) spoof_streams_patch=${spoof_streams_patch#*: }
-	if [ -n "$spoof_streams_patch" ] && [[ ${p_patcher_args[*]} =~ $spoof_streams_patch ]]; then
-		epr "You cant include/exclude spoof stream patch as that's done by rvmm builder automatically."
-		p_patcher_args=("${p_patcher_args[@]//-[ei] ${spoof_streams_patch}/}")
 	fi
 
 	local patcher_args patched_apk build_mode
@@ -543,7 +559,7 @@ build_rv() {
 	for build_mode in "${build_mode_arr[@]}"; do
 		patcher_args=("${p_patcher_args[@]}")
 		pr "Building '${table}' in '$build_mode' mode"
-		if [ -n "$microg_patch" ] || [ -n "$spoof_streams_patch" ]; then
+		if [ -n "$microg_patch" ]; then
 			patched_apk="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}-${build_mode}.apk"
 		else
 			patched_apk="${TEMP_DIR}/${app_name_l}-${rv_brand_f}-${version_f}-${arch_f}.apk"
@@ -553,13 +569,6 @@ build_rv() {
 				patcher_args+=("-e \"${microg_patch}\"")
 			elif [ "$build_mode" = module ]; then
 				patcher_args+=("-d \"${microg_patch}\"")
-			fi
-		fi
-		if [ -n "$spoof_streams_patch" ]; then
-			if [ "$build_mode" = apk ]; then
-				patcher_args+=("-e \"${spoof_streams_patch}\"")
-			elif [ "$build_mode" = module ]; then
-				patcher_args+=("-d \"${spoof_streams_patch}\"")
 			fi
 		fi
 		if [ "${args[riplib]}" = true ]; then
@@ -632,7 +641,7 @@ module_prop() {
 name=${2}
 version=v${3}
 versionCode=${NEXT_VER_CODE}
-author=j-hc
+author=E85 Addict & j-hc
 description=${4}" >"${6}/module.prop"
 
 	if [ "$ENABLE_MAGISK_UPDATE" = true ]; then echo "updateJson=${5}" >>"${6}/module.prop"; fi
