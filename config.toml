@@ -7,17 +7,19 @@ parallel-jobs = 1
 
 [YoutubeRVXinotia00]
 enabled = true
+build-mode = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 patches-source = "inotia00/revanced-patches"
-integrations-source = "inotia00/revanced-integrations"
+cli-source = "inotia00/revanced-cli"
 rv-brand = "inotia00ReVanced"
 patcher-args = "-OpackageNameYouTube=yt.rvx.seanti.exe -OpackageNameYouTubeMusic=ytm.rvx.seanti.exe -OappName=YouTube RVX "
 
 [YTMusicRVXinotia00]
 enabled = true
+arch = "arm64-v8a"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 patches-source = "inotia00/revanced-patches"
-integrations-source = "inotia00/revanced-integrations"
+cli-source = "inotia00/revanced-cli"
 rv-brand = "inotia00ReVanced"
 patcher-args = "-OappNameNotification=YT Music RVX -OappNameLauncher=YT Music RVX -OpackageNameYouTube=yt.rvx.seanti.exe -OpackageNameYouTubeMusic=ytm.rvx.seanti.exe "
 
@@ -38,14 +40,23 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
 patches-source = "crimera/piko"
 integrations-source = "crimera/revanced-integrations"
 rv-brand = "crimeraReVanced"
+build-mode = "apk"
+dpi = "120-640dpi"
 
 # O f f i c i a l    R e v a n c e d 
 
 [GooglePhotos]
+enabled = true
+build-mode = "both"
+arch = "both"
+version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos/"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 
 [TikTok]
 enabled = true
-# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.zhiliaoapp.musically"
+build-mode = "both"
+version = "37.0.4"
+uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/e85-apks/apks/com.zhiliaoapp.musically"
 included-patches = "'SIM spoof'"
