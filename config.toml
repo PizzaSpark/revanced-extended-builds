@@ -8,9 +8,6 @@ parallel-jobs = 1
 [YoutubeRVXinotia00]
 enabled = true
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
-version = "19.44.39"
-arch = "all"
-build-mode = "apk"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "inotia00ReVanced"
@@ -19,9 +16,6 @@ patcher-args = "-OpackageNameYouTube=yt.rvx.seanti.exe -OpackageNameYouTubeMusic
 [YTMusicRVXinotia00]
 enabled = true
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
-version = "7.25.53"
-arch = "arm64-v8a"
-build-mode = "apk"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "inotia00ReVanced"
@@ -30,8 +24,6 @@ patcher-args = "-OappNameNotification=YT Music RVX -OappNameLauncher=YT Music RV
 [RedditRVXinotia00]
 enabled = true
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
-arch = "all"
-build-mode = "apk"
 patches-source = "inotia00/revanced-patches"
 integrations-source = "inotia00/revanced-integrations"
 rv-brand = "inotia00ReVanced"
@@ -41,10 +33,8 @@ patcher-args = "-OpackageNameReddit=reddit.rvx.seanti.exe -OappName=Reddit RVX "
 # C r i m e r a    P a t c h e s
 
 [Twittercrimera]
-enabled = false
+enabled = true
 apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
-build-mode = "apk"
-dpi = "120-640dpi"
 patches-source = "crimera/piko"
 integrations-source = "crimera/revanced-integrations"
 rv-brand = "crimeraReVanced"
@@ -52,9 +42,6 @@ rv-brand = "crimeraReVanced"
 # O f f i c i a l    R e v a n c e d 
 
 [GooglePhotos]
-build-mode = "apk"
-arch = "both"
-version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos/"
 uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
 
