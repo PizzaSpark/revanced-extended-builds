@@ -6,7 +6,7 @@ parallel-jobs = 1
 # RVX
 
 [YoutubeRVXinotia00]
-enabled = false
+enabled = true
 build-mode = "both"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 patches-source = "inotia00/revanced-patches"
@@ -15,7 +15,7 @@ rv-brand = "inotia00ReVanced"
 patcher-args = "--legacy-options options.json"
 
 [YTMusicRVXinotia00]
-enabled = false
+enabled = true
 arch = "arm64-v8a"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 patches-source = "inotia00/revanced-patches"
@@ -31,11 +31,3 @@ cli-source = "inotia00/revanced-cli"
 rv-brand = "inotia00ReVanced"
 included-patches = "'Change package name' 'Custom branding name for Reddit'"
 patcher-args = "--legacy-options options.json"
-
-[CrimeraTwitter]
-enabled = true
-build-mode = "both"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter/"
-patches-source = "crimera/piko"
-integrations-organization = "crimera"
-integrations-source = "revanced/revanced-integrations"
