@@ -1,0 +1,56 @@
+[
+    {
+      "patchName": "GmsCore Support",
+      "options": [
+        {
+          "key": "packageNameYoutube",
+          "value": "yt.rvx.seanti.exe"
+        },
+        {
+          "key": "packageNameYouTubeMusic",
+          "value": "ytm.rvx.seanti.exe"
+        }
+      ]
+    },
+    {
+        "patchName": "Custom branding name for YouTube",
+        "options": [
+          {
+            "key": "appName",
+            "value": "Youtube RVX"
+          }
+        ]
+    },
+    {
+        "patchName": "Custom branding name for YouTube Music",
+        "options": [
+          {
+            "key": "appNameNotification",
+            "value": "YT Music RVX"
+          },
+          {
+            "key": "appNameLauncher",
+            "value": "YT Music RVX"
+          }
+        ]
+    },
+    {
+        "patchName": "Custom branding name for Reddit",
+        "options": [
+          {
+            "key": "appName",
+            "value": "Reddit RVX"
+          }
+        ]
+    },
+    {
+        "patchName": "Change package name",
+        "options": [
+          {
+            "key": "packageNameReddit",
+            "value": "reddit.rvx.seanti.exe"
+          }
+        ]
+    }
+    
+]

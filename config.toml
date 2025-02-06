@@ -12,7 +12,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
 patches-source = "inotia00/revanced-patches"
 cli-source = "inotia00/revanced-cli"
 rv-brand = "inotia00ReVanced"
-patcher-args = "-OpackageNameYouTube=yt.rvx.seanti.exe -OpackageNameYouTubeMusic=ytm.rvx.seanti.exe -OappName=YouTube RVX "
+patcher-args = "--legacy-options options.json"
 
 [YTMusicRVXinotia00]
 enabled = true
@@ -21,7 +21,7 @@ apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube-music/"
 patches-source = "inotia00/revanced-patches"
 cli-source = "inotia00/revanced-cli"
 rv-brand = "inotia00ReVanced"
-patcher-args = "-OappNameNotification=YT Music RVX -OappNameLauncher=YT Music RVX -OpackageNameYouTube=yt.rvx.seanti.exe -OpackageNameYouTubeMusic=ytm.rvx.seanti.exe "
+patcher-args = "--legacy-options options.json"
 
 [RedditRVXinotia00]
 enabled = true
@@ -29,5 +29,5 @@ apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
 patches-source = "inotia00/revanced-patches"
 cli-source = "inotia00/revanced-cli"
 rv-brand = "inotia00ReVanced"
-included-patches = "'Change package name' 'Custom branding name for Reddit' 'Hide navigation buttons'"
-patcher-args = "-OpackageNameReddit=reddit.rvx.seanti.exe -OappName=Reddit RVX "
+included-patches = "'Change package name' 'Custom branding name for Reddit'"
+patcher-args = "--legacy-options options.json"
