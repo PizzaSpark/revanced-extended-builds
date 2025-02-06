@@ -24,7 +24,7 @@ rv-brand = "inotia00ReVanced"
 patcher-args = "--legacy-options options.json"
 
 [RedditRVXinotia00]
-enabled = true
+enabled = false
 apkmirror-dlurl = "https://apkmirror.com/apk/redditinc/reddit/"
 patches-source = "inotia00/revanced-patches"
 cli-source = "inotia00/revanced-cli"
