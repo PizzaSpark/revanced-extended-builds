@@ -31,32 +31,3 @@ cli-source = "inotia00/revanced-cli"
 rv-brand = "inotia00ReVanced"
 included-patches = "'Change package name' 'Custom branding name for Reddit' 'Hide navigation buttons'"
 patcher-args = "-OpackageNameReddit=reddit.rvx.seanti.exe -OappName=Reddit RVX "
-
-# C r i m e r a    P a t c h e s
-
-[Twittercrimera]
-enabled = true
-apkmirror-dlurl = "https://www.apkmirror.com/apk/x-corp/twitter"
-patches-source = "crimera/piko"
-integrations-source = "crimera/revanced-integrations"
-rv-brand = "crimeraReVanced"
-build-mode = "apk"
-dpi = "120-640dpi"
-
-# O f f i c i a l    R e v a n c e d 
-
-[GooglePhotos]
-enabled = true
-build-mode = "both"
-arch = "both"
-version = "auto"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/photos/"
-uptodown-dlurl = "https://google-photos.en.uptodown.com/android"
-
-[TikTok]
-enabled = true
-build-mode = "both"
-version = "37.0.4"
-uptodown-dlurl = "https://tiktok.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/e85-apks/apks/com.zhiliaoapp.musically"
-included-patches = "'SIM spoof'"
